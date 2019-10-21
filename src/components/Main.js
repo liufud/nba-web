@@ -4,7 +4,6 @@ import DataViewContainer from './DataViewContainer';
 import { Profile } from './Profile';
 import SearchBar from './SearchBar';
 import { DEFAULT_PLAYER_INFO } from '../constants';
-// import axios from 'axios';
 
 export class Main extends React.Component {
   state = {
@@ -24,19 +23,7 @@ export class Main extends React.Component {
    }
 
   componentDidMount() {
-    //   axios.get('http://stats.nba.com/stats/commonplayerinfo')
-    //     .then((res) => {
-    //         debugger;
-    //     })
-    // const httpInterceptor = axios.interceptors.request.use(function (config) {
-    //     return config;
-    //   }, function (error) {
-    //     console.log(error)
-    //     return Promise.reject(error);
-    //   });
     this.loadPlayerInfo(this.state.playerInfo.fullName);
-    // axios.interceptors.request.eject(httpInterceptor);
-
   }
 
   render() {
